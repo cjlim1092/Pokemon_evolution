@@ -1,0 +1,126 @@
+ html {
+    
+    --top-spacing: 55px;
+    
+  }
+
+  .header {
+    padding: 60px;
+    text-align: center;
+    background-color: #fde900;
+    color: #black;
+    font-size: 30px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  body {
+    
+    background-color:white;
+    font-family: "Flexo-Regular",arial,sans-serif;
+    scroll-padding-top: var(--top-spacing);
+    margin: var(--top-spacing) auto;
+  }
+  
+  .layout{
+        -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 24px;
+    width: 66%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    
+  }
+  
+
+
+
+  .topnav {
+    overflow: hidden;
+    background-color: #000000;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+    color: #202124;
+    position:fixed;
+    padding: 5px;
+    width: 100%;
+    top: 0;
+    left: 0; 
+  }
+  
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #ec2029;
+    color: white;
+  }
+
+  #paper {
+    width: inline;
+    height: inline;
+    position: relative;
+    margin: 20px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #888;
+  }
+  
+  /* styling red vertical line */
+  #paper::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    background-color: rgba(255,0,0,0.6);
+  }
+  
+  /* styling blue horizontal lines */
+  #pattern {
+    height: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+  }
+
+  /* styling text content */
+#paperContent {
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+ 
+.center {
+  margin: auto;
+  
+  padding: 10px;
+}
+
+#photoBox {
+  width: 100%;
+  float: left;
+  height: inline;
+  padding: 20px;
+  display:block;
+}
+
