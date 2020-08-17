@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  
+    <!-- link to fiebase script on repository -->
+     <script src="scripts/firebase.js"></script>
+    <!--End firbase copy and paste-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -16,29 +27,98 @@
       <a href="family.html">Family Tree</a>
       <a href="geologictime.html">History</a>
       <a href="Alola.html">Alola</a>
+      <a href="quiz.html"></a>
     </div>
   
     <!--Page content begins here-->
     <div class= "header"><h1>Metamorphosis</h1></div>
 
     <div class= "layout">
+
+      <h1>2. What is Metamorphosis?</h1>
+
+    <!--Learning Objectives-->  
+      <div id="paper">
+        <div id="pattern">
+          <div id="paperContent">
+        
+          <h2>Learning Objectives</h2>
+            Students will metamorphosis in nature to evolution in Pokemon games.
+        <br>
+            </div>
+        </div>
+     </div>
+    <!--End learning objectives-->
+
      <!--Insert picture of a butterfly metamorphosis-->
     <!--Insert a picture of butterfree metamorphosis-->
+    <div class="photoBox">
+      <img width="100%" src="images/metamorphosis2.png" alt="Butterfly Metamorphosis">
+    </div>
     <p> <br>
       <b>Metamorphosis</b> is the process of transformation from an immature form to an adult form in two or more distinct stages. Basically it is the way that some animals grow up. It is not evolution because it happens to <u>one individual</u>, not an entire species. 
       
     </p>
-    <p>Think of this butterfly. It is one individual. Does it evolved or undergo metamorphosis?</p>
+    <div class= "boxed"><p>Think of this butterfly. It is one individual. Does it undergo metamorphosis or evolve?</p>
+    
     <!--Insert multiple choice here-->
+    
+      <!--Radio Quiz-->
+    <form>
+        <input type="radio" id="metamorphosis" name="butterfly" value="metamorphosis">
+        <label for="metamorphosis" >A. Metamorphosis</label>
+        <br>
+      
+        <input type="radio" id="evolution" name="butterfly" value="evolution">
+        <label for="evolution">B. Evolve</label>
+        <br>
+           <!--Submit
+      <div class="row">
+        <input id = "submit2A" type="submit" value="Submit">
+      </div>*/-->
+    </form>
+    </div>
+    
+
+      <br><div class="boxed"><form>
     <p>Think of this caterpee. Does it evolve or undergo metamorphosis? </p>
+    
     <!--Insert multiple choice here-->
+      <input type="radio" id="metamorphosis" name="caterpee" value="metamorphosis">
+      <label for="metamorphosis">A. Metamorphosis</label>
+      <br>
+      
+        <input type="radio" id="evolution" name="caterpee" value="evolution">
+        <label for="evolution">B. Evolve</label>
+        <br>
+           <!--Submit
+    <div class="row">
+      <input id= "submit2B" type="submit" value="Submit">
+    </div>-->
+      
+  </form></div>
+    
     <!--Give feedback-->
    <p>So now that you know a little about metamorphosis, do you have any questions?</p>
+   
    <!--Inset a question box-->
-
-  </div>
-  </body>
-  
-
+   <form>
+    <div class="row">
+      <textarea id="questions1" placeholder="Do you have any questions?" style=" height:200px" width="100%"></textarea>
+    </div>
     
+    <!--Username-->
+      <div class= "row">
+      <input id="name" placeholder="username" width="100%">
+    </div>
+    
+   <!--Submit-->
+    <div class="row" id="submit2A"> Click
+      <!--<input id="submit2A" type="submit" value="Submit">-->
+    </div>
+    
+  </form>
+    
+  </div>
+  </body>    
 </html>

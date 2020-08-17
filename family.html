@@ -16,25 +16,119 @@
       <a class="active" href="family.html">Family Tree</a>
       <a href="geologictime.html">History</a>
       <a href="Alola.html">Alola</a>
+      <a href="quiz.html"></a>
     </div>
   
     <!--Page content begins here-->
     <div class="header"><h1>Pikachu Family</h1></div>
     
     <div class="layout">
-    <p>Learning Goals: <br>
-      <ul>Offspring Inherit traits from their parents, but are ot identical to their parents</ul>
-      <ul>There is variation within a population</ul>
-    </p>
+
+      <!--Small title-->
+      <h1>3. How are traits passed down?</h1>
+
+    <!--Learning Objectives-->  
+      <div id="paper">
+        <div id="pattern">
+          <div id="paperContent">
+        
+          <h2>Learning Objectives</h2>
+            Students will analyze family photos to think about inheritence.<br>
+            Students will look at photos of a population and think about inheritence.
+            </div>
+        </div>
+     </div>
+    <!--End learning objectives-->
+
     <!--Insert picture of a pikachu family-->
+    <div class="photoBox">
+      <img src="images/pikachuFamily.jpg" alt="Pikachu family" width="100%" >
+    </div>
+
     <p>This is a family photo of the pikachu family. There is a Mom, a Dad, and a baby. The baby looks like the Mom and the Dad. This is because the baby inherited <b>traits</b> from each parent. </p>
     <p>Looking at the picture, determine which parent the baby got each trait from</p>
     <!--Insert a quiz with mom, dad, both for : eyes, nose, ears, mouth, tail-->
-    <p>Optional: Take a look at a family photo with your parents. Determine which parent passed on each trait to you.</p>
-    <!--Insert a quiz for hair color, eye color, nose shape, ear shape-->
+    <p>What traits did the baby get from the Mom?</p>
+      <div class="row">
+        <input id="Name" placeholder="username" width="100%">
+      </div>
+      <div cass="row">
+        <input type="checkbox" id="traitsA1" name="traitsA1" value="1">
+        <label for="traitsA1">A. Eyes</label>
+      </div><br>
+      <div cass="row">
+        <input type="checkbox" id="traitsB1" name="traitsB1" value="2">
+        <label for="traitsB1">B. Nose</label>
+      </div><br>
+      <div cass="row">
+        <input type="checkbox" id="traitsC1" name="traitsC1" value="3">
+        <label for="traitsC1">C. Ears</label>
+      </div><br>
+      <div cass="row">
+        <input type="checkbox" id="traitsD1" name="traitsD1" value="4">
+        <label for="traitsD1">D. Mouth</label>
+      </div><br>
 
+    <p>What traits did the baby get from the Dad?</p>
+      <div cass="row">
+        <input type="checkbox" id="traitsA2" name="traitsA2" value="1">
+        <label for="traitsA2">A. Eyes</label>
+      </div><br>
+      <div cass="row">
+        <input type="checkbox" id="traitsB2" name="traitsB2" value="2">
+        <label for="traitsB2">B. Nose</label>
+      </div><br>
+      <div cass="row">
+        <input type="checkbox" id="traitsC2" name="traitsC2" value="3">
+        <label for="traitsC2">C. Ears</label>
+      </div><br>
+      <div cass="row">
+        <input type="checkbox" id="traitsD1" name="traitsD1" value="4">
+        <label for="traitsD2">D. Mouth</label>
+      </div><br>
+
+    <p style="border: solid;">Optional: Take a look at a family photo with your parents. Determine which parent passed on each trait to you.</p>
+    <!--Insert a quiz for hair color, eye color, nose shape, ear shape-->
+    <p>What traits did you get from your Mom?</p>
+    <div cass="row">
+      <input type="checkbox" id="traitsA3" name="traitsA3" value="1">
+      <label for="traitsA3">A. Eye color</label>
+    </div><br>
+    <div cass="row">
+      <input type="checkbox" id="traitsB3" name="traitsB3" value="2">
+      <label for="traitsB3">B. Nose shape</label>
+    </div><br>
+    <div cass="row">
+      <input type="checkbox" id="traitsC3" name="traitsC3" value="3">
+      <label for="traitsC3">C. Ear shape</label>
+    </div><br>
+    <div cass="row">
+      <input type="checkbox" id="traitsD3" name="traitsD3" value="4">
+      <label for="traitsD3">D. Hair color</label>
+    </div><br>
+
+  <p>What traits did the baby get from the Dad?</p>
+    <div cass="row">
+      <input type="checkbox" id="traitsA4" name="traitsA4" value="1">
+      <label for="traitsA4">A. Eye color</label>
+    </div><br>
+    <div cass="row">
+      <input type="checkbox" id="traitsB4" name="traitsB4" value="2">
+      <label for="traitsB4">B. Nose shape</label>
+    </div><br>
+    <div cass="row">
+      <input type="checkbox" id="traitsC4" name="traitsC4" value="3">
+      <label for="traitsC4">C. Ear shape</label>
+    </div><br>
+    <div cass="row">
+      <input type="checkbox" id="traitsD4" name="traitsD4" value="4">
+      <label for="traitsD4">D. Hair color</label>
+    </div><br>
     <p>Do children look exactly like their parents? Why or why not?</p>
     <!--Insert yes/no multiple choice and free response box-->
+    <div class="row">
+      <textarea id="explain2" placeholder="Why?" style="width=100%"></textarea>
+    </div>
 
     <p>But wait! There are also traits that children might have that neither of their parents had. These are called <b>mutations</b> and they come from the process of combining the DNA from each parent
     <ul>
@@ -47,6 +141,12 @@
     <h2>Make a prediction</h2>
     <p>What do you think will happen to the traits of a species over thousands of years?</p>
     <!--Insert a text box-->
+    <div class="row">
+      <textarea id="explain3" placeholder="Why?" style="width=100%"></textarea>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
     <br><br>
   </div>
   </body>
