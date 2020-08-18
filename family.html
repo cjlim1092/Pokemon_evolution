@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  
+<!-- link to fiebase script on repository -->
+  <script src="scripts/firebase4.js"></script>
+<!--End firbase copy and paste-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -48,86 +60,84 @@
     <p>This is a family photo of the pikachu family. There is a Mom, a Dad, and a baby. The baby looks like the Mom and the Dad. This is because the baby inherited <b>traits</b> from each parent. </p>
     <p>Looking at the picture, determine which parent the baby got each trait from</p>
     <!--Insert a quiz with mom, dad, both for : eyes, nose, ears, mouth, tail-->
-    <p>What traits did the baby get from the Mom?</p>
-      <div class="row">
-        <input id="Name" placeholder="username" width="100%">
+    
+    <div class="boxed">
+    <label>What traits did the baby get from the Mom?</label><br>
+        <input type="radio" id="traitsA1" name="pikachutraits1" value="traitsA1">
+        <label for="traitsA1">A. Cheeks</label>
+      <br>
+      
+        <input type="radio" id="traitsB1" name="pikachutraits1" value="traitsB1">
+        <label for="traitsB1">B. Tail</label>
+      <br>
+      
+        <input type="radio" id="traitsC1" name="pikachutraits1" value="traitsC1">
+        <label for="traitsC1">C. Ears</label><br>
+        <input type="radio" id="traitsD1" name="pikachutraits1" value="traitsD1">
+        <label for="traitsD1">D. Tail and Ears</label><br>
+        <input type="radio" id="traitsE1" name="pikachutraits1" value="traitsE1">
+        <label for="traitsE1">E. Cheeks and Ears</label><br>
+        <div><p id="checkMom" onmouseover="checkMom()" style="background-color: yellow;">Check</p></div>
       </div>
-      <div cass="row">
-        <input type="checkbox" id="traitsA1" name="traitsA1" value="1">
-        <label for="traitsA1">A. Eyes</label>
-      </div><br>
-      <div cass="row">
-        <input type="checkbox" id="traitsB1" name="traitsB1" value="2">
-        <label for="traitsB1">B. Nose</label>
-      </div><br>
-      <div cass="row">
-        <input type="checkbox" id="traitsC1" name="traitsC1" value="3">
-        <label for="traitsC1">C. Ears</label>
-      </div><br>
-      <div cass="row">
-        <input type="checkbox" id="traitsD1" name="traitsD1" value="4">
-        <label for="traitsD1">D. Mouth</label>
-      </div><br>
-
-    <p>What traits did the baby get from the Dad?</p>
-      <div cass="row">
-        <input type="checkbox" id="traitsA2" name="traitsA2" value="1">
-        <label for="traitsA2">A. Eyes</label>
-      </div><br>
-      <div cass="row">
-        <input type="checkbox" id="traitsB2" name="traitsB2" value="2">
-        <label for="traitsB2">B. Nose</label>
-      </div><br>
-      <div cass="row">
-        <input type="checkbox" id="traitsC2" name="traitsC2" value="3">
-        <label for="traitsC2">C. Ears</label>
-      </div><br>
-      <div cass="row">
-        <input type="checkbox" id="traitsD1" name="traitsD1" value="4">
-        <label for="traitsD2">D. Mouth</label>
-      </div><br>
+      <br>
+   
+      <div class="boxed">
+      <label>What traits did the baby get from the Dad?</label><br>
+        <input type="radio" id="traitsA2" name="pikachutraits2" value="traitsA2">
+        <label for="traitsA2">A. Cheeks</label><br>
+        <input type="radio" id="traitsB2" name="pikachutraits2" value="traitsB2">
+        <label for="traitsB2">B. Tail</label><br>
+        <input type="radio" id="traitsC2" name="pikachutraits2" value="traitsC2">
+        <label for="traitsC2">C. Ears</label><br>
+        <input type="radio" id="traitsD2" name="pikachutraits2" value="traitsD2">
+        <label for="traitsD2">D. Tail and Ears</label><br>
+        <input type="radio" id="traitsE2" name="pikachutraits2" value="traitsE2">
+        <label for="traitsE2">E. Cheeks and Ears</label><br>
+        <div><p id="check" onmouseover="checkDad()" style="background-color: yellow;">Check</p></div>
+      </div>
+      <br>
 
     <p style="border: solid;">Optional: Take a look at a family photo with your parents. Determine which parent passed on each trait to you.</p>
     <!--Insert a quiz for hair color, eye color, nose shape, ear shape-->
-    <p>What traits did you get from your Mom?</p>
-    <div cass="row">
-      <input type="checkbox" id="traitsA3" name="traitsA3" value="1">
+    <div class="boxed">
+    <label>What traits did you get from your Mom?</label><br>
+      <input type="checkbox" id="traitsA3" name="humantraits1" value="traitsA3">
       <label for="traitsA3">A. Eye color</label>
-    </div><br>
-    <div cass="row">
-      <input type="checkbox" id="traitsB3" name="traitsB3" value="2">
+      <br>
+      <input type="checkbox" id="traitsB3" name="humantraits1" value="traitsB3">
       <label for="traitsB3">B. Nose shape</label>
-    </div><br>
-    <div cass="row">
-      <input type="checkbox" id="traitsC3" name="traitsC3" value="3">
+      <br>
+      <input type="checkbox" id="traitsC3" name="humantraits1" value="traitsC3">
       <label for="traitsC3">C. Ear shape</label>
-    </div><br>
-    <div cass="row">
-      <input type="checkbox" id="traitsD3" name="traitsD3" value="4">
-      <label for="traitsD3">D. Hair color</label>
-    </div><br>
+      <br>
+      <input type="checkbox" id="traitsD3" name="humantraits1" value="traitsD3">
+      <label for="traitsD3">D. Hair color</label><br>
+      </div><br>
 
-  <p>What traits did the baby get from the Dad?</p>
-    <div cass="row">
-      <input type="checkbox" id="traitsA4" name="traitsA4" value="1">
+
+      <div class="boxed">
+    <label>What traits did the you get from your Dad?</label><br>
+    
+      <input type="checkbox" id="traitsA4" name="humantraits2" value="traitsA4">
       <label for="traitsA4">A. Eye color</label>
-    </div><br>
-    <div cass="row">
-      <input type="checkbox" id="traitsB4" name="traitsB4" value="2">
+    <br>
+      <input type="checkbox" id="traitsB4" name="humantraits2" value="traitsB4">
       <label for="traitsB4">B. Nose shape</label>
-    </div><br>
-    <div cass="row">
-      <input type="checkbox" id="traitsC4" name="traitsC4" value="3">
+    <br>
+      <input type="checkbox" id="traitsC4" name="humantraits2" value="traitsB4">
       <label for="traitsC4">C. Ear shape</label>
-    </div><br>
-    <div cass="row">
-      <input type="checkbox" id="traitsD4" name="traitsD4" value="4">
+    <br>
+      <input type="checkbox" id="traitsD4" name="humantraits2" value="traitsD4">
       <label for="traitsD4">D. Hair color</label>
     </div><br>
-    <p>Do children look exactly like their parents? Why or why not?</p>
-    <!--Insert yes/no multiple choice and free response box-->
-    <div class="row">
-      <textarea id="explain2" placeholder="Why?" style="width=100%"></textarea>
+   <div class=boxed>
+    <label>Do children look exactly like their parents? Why or why not?</label><br>
+      <input type="radio" id="yesparents" name="looklike" value="yes">
+      <label for="yesparents">Yes</label>
+      <input type="radio" id="noparents" name="looklike" value="no">
+      <label for="noparents">No</label><br>
+  <br>
+      <textarea id="explain2" cols="50" placeholder="They do/don't look exactly like their parents because..."></textarea>
     </div>
 
     <p>But wait! There are also traits that children might have that neither of their parents had. These are called <b>mutations</b> and they come from the process of combining the DNA from each parent
@@ -141,13 +151,16 @@
     <h2>Make a prediction</h2>
     <p>What do you think will happen to the traits of a species over thousands of years?</p>
     <!--Insert a text box-->
-    <div class="row">
-      <textarea id="explain3" placeholder="Why?" style="width=100%"></textarea>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-    <br><br>
+    <div class="row"></div>
+      <textarea id="explain3" placeholder="I think the species will..." style="width=100%"></textarea>
+    
+    <!--Username-->
+    <br>
+      <input id="Name" placeholder="username" width="100%">
+
+   <!--Submit-->
+   <button onclick="writeFamilyData()">Submit</button>
+    <br><br></div>
   </div>
   </body>
   

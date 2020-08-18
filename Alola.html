@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  
+<!-- link to fiebase script on repository -->
+  <script src="scripts/firebase4.js"></script>
+<!--End firbase copy and paste-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <title>Pokemon Family Trees</title>
+    <title>Alola Region</title>
 
   </head>
   <body>
@@ -43,27 +55,30 @@
       <img width="100%" src="images/Exeggutor_anime.png" alt="Exeggutor, one tall, one short">
     </div>
 
-    <p>When the Alola region was introduced, a whole new world of tropical pokemon were revealed. Some of these pokemon were similar to pokemon we have seen before, but with slight differences. <br>
-    What are some differences in traits that you see between Exeggutors?</p>
+    <p>When the Alola region was introduced, a whole new world of tropical pokemon were revealed. Some of these pokemon were similar to pokemon we have seen before, but with slight differences. This is because of <u>natural selection.</u> Natural selection is the process where individuals who are better adapted to their envrionment tend to survive and produce more offspring. Thus these adaptations will be passed on over time. For example, a polar bear has fur which is thick and white. The thick fur was an adaptation for the cold environment. The white fur was another adaptation that helped them live in snowy areas. <br>
+    <br><div class="boxed">What are some differences in traits that you see between Exeggutors?</p>
     <!--Insert text box here-->
-    <div class="row">
-      <textarea id="explain4" placeholder="Explain the differences" style=" height:200px" width="400px"></textarea>
+    
+      <textarea id="explain4" cols="80" placeholder="The differences are..." style=" height:200px" width="400px"></textarea>
     </div>
+<br>
+     <div class="boxed">
 
-    <p>How do you think these traits might be advantageous in a tropical island environment? </p>
+     <p>How do you think these traits might be advantageous in a tropical island environment? </p>
         <!--Insert text box here-->
-        <div class="row">
-          <textarea id="explain5" placeholder="Explain" style=" height:200px" width="400px"></textarea>
-        </div>
+       
+          <textarea id="explain5" cols="80" placeholder="These traits help them survive in a tropical environment because..." style=" height:200px" width="400px"></textarea>
+        </div><br>
 
+        <div class="boxed">
     <p>Do you think this is an example of natural selection?</p>        <!--Multiple choice, this is an example of natural selection-->
-        <div cass="row">
+
           <input type="radio" id="NatSelY" name="NatSelY" value="1">
           <label for="NatSelY">Yes</label>
-        </div><br>
-        <div calss="row">
-          <input type="radio" id="NatSelN" name="NatSelN" value="2">
+        <br>
+          <input type="radio" id="NatSelN" name="NatSelY" value="2">
           <label for="NatSelN">No</label><br>
+          <div><p id="check" onmouseover="checkNS()" style="background-color: yellow;">Check</p></div>
         </div>
 
         <!--Insert picture of dugtrio-->
@@ -72,30 +87,32 @@
         </div>
     
     <p>Other Alolan traits might not be due to natural selection, but just by random chance.</p>
-    
+    <div class="boxed">
     <!--Do you think this is an example of natural seletion or random chance?-->
     <p>Do you think this is an example of natural selection or random chance?</p>
-    <div cass="row">
+    <br>
       <input type="radio" id="NatSelY2" name="NatSelY2" value="1">
       <label for="NatSelY2">Natural Selection</label>
-    </div><br>
-    <div calss="row">
-      <input type="radio" id="NatSelN2" name="NatSelN2" value="2">
+    <br>
+    
+      <input type="radio" id="NatSelN2" name="NatSelY2" value="2">
       <label for="NatSelN2">Random Chance</label><br>
+      <div><p id="check" onmouseover="checkNS2()" style="background-color: yellow;">Check</p></div>
     </div>
-
+    <br>
     <!--Do you think this is evolution? Why or why not? / include feedback-->
-    <p>Do you think this is evolution? Why or why not?</p>
-    <div class="row">
-      <textarea id="explain6" placeholder="Explain" style=" height:200px" width="400px"></textarea>
+    <div class="boxed">
+      <p>Do you think this is evolution? Why or why not?</p>
+      <textarea id="explain6" cols="80" placeholder="This is/isn't evolution because..." style=" height:200px" width="400px"></textarea>
     </div>
 
-    <div class="row">
+    <br>
       <input id="Name" placeholder="username" width="100%">
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
+    
+    <button onclick="writeAlolaData()">Submit</button>
+    <br>
+    <br>
+    <h2>Are you ready for the quiz? <a href="quiz.html">Click Here</a></h2>
 
   </div>
   </body>

@@ -8,6 +8,7 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
   
 <!-- link to fiebase script on repository -->
   <script src="scripts/firebase4.js"></script>
@@ -16,7 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <title>Alola Region</title>
+    <!--Script Library-->
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <title>Quiz</title>
 
   </head>
   <body>
@@ -28,7 +31,7 @@
       <a href="family.html">Family Tree</a>
       <a href="geologictime.html">History</a>
       <a href="Alola.html">Alola</a>
-      <a class="active" href="quiz.html"></a>
+      <a href="quiz.html"></a>
         </div>
   
     <!--Page content begins here-->
@@ -56,14 +59,47 @@
     </div>
 
     <p>In this module you learned about evolution in pokemon! Review your answers to previous questions below.</p>
-    <!--Insert previous questions-->
+    <!--Insert previous questions https://www.youtube.com/watch?v=NcewaPfFR6Y-->
 
     <!--Q1: Are children exactly the same as their parents? Q2: Does evolution happen to an individual or a population? Q3: Does evolution happen over a short or a long time? Q4: Identify the common ancestor + pictue-->
 
-    <p>You originally said ___ was evolution because ____
-    You originally said children do/don't look like their parents because___
-    you predicted that this would happen to traits over thousands of years _____
+    <p>You originally said ___ was evolution because ____.
+    You originally said children ____ look like their parents because___.
+    you predicted that would happen to traits over thousands of years: _____.
+    You said that evoluion happened over a ____ period of time. 
+    You said that evolution happens to a ______.
+    You said that Exeggutor's traits might help them live in a tropical environment because ____. This is an example of natural selection.
+
 </p>
+<br><br>
+<div class="boxed">
+  <h1>Quiz</h1>
+   <label>Does metamorphosis happen to an individual or a species?</label><br>
+     <input type="radio" id="individualT" name="metamorphosisT" value="individualT">
+      <label for="individualT">A. Individual</label><br>
+     <input type="radio" id="speciesF" name="metamorphosisT" value="speciesF">
+      <label for="speciesF">B. Species </label><br>
+
+  <label>Does an individual inherit ALL of their traits from one parent?</label><br>
+    <input type="radio" id="ALLF" name="inheritTraits" value="ALLF">
+      <label for="ALLF">A. Yes</label><br>
+    <input type="radio" id="someT" name="inheritTraits" value="someT">
+      <label for="someT">B. No </label><br>
+  
+  <label>Natural selection is when traits which help an organism survive in thier aren't passed down to the next generation.</label><br>
+    <input type="radio" id="T3" name="natrualSelectionF" value="T3">
+      <label for="T3">A. True </label><br>
+    <input type="radio" id="F3" name="natrualSelectionF" value="F3">
+      <label for="F3">B. False </label><br>
+  
+  <label>Does evolution happen to an individual or a species?</label>
+    <input type="radio" id="individualF" name="IorS" value="individualF">
+      <label for="individualF">A. Individual</label><br>
+    <input type="radio" id="speciesT" name="IorS" value="speciesT">
+      <label for="speciesT">B. Species </label><br>
+  
+      <div><p id="checkQuiz1" onmouseover="checkQuiz()" style="background-color: yellow;">Check</p></div>
+</div>
 
     <div class="photoBox">
         <img width="100%" src="images/metamorphosis1.png" alt="Beedrill family">
@@ -79,7 +115,7 @@
     <p>So, based on what you learned, lets go back to the original question. Which one of these pictures represents evolution and why? </p>
     <!--Text box entry-->
     
-        <textarea id="explain7" placeholder="I think A/B is evolution because..." style="width=100%"></textarea>
+        <textarea id="explain7" rows="4" cols="100" placeholder="I think A/B is evolution because..." style="width=100%"></textarea>
   
       <br>
         <input id="Name" placeholder="username" width="100%">
@@ -87,9 +123,15 @@
       <button onclick="writeQuizData()">Submit</button>
       <button onclick="hint()">Hint</button>
     </div>
+    
+    <br><br>
+    <div id="displayHint">Hint</div>
 
     <br><br>
-    <p id="displayHint">Hint</p>
+    <div class="boxed" id="graph">
+
+
+    </div>
 
   </div>
   </body>

@@ -3,13 +3,14 @@
   <head>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
   
 <!-- link to fiebase script on repository -->
-  <script src="scripts/firebase.js"></script>
+  <script src="scripts/firebase4.js"></script>
 <!--End firbase copy and paste-->
 
 
@@ -57,10 +58,10 @@
      </div>
     <!--End learning objectives-->
 
-    <!--Insert antibiotic resistance video-->
+    <!--Insert antibiotic resistance video -->
     <div class="center"><iframe width="100%" height="450px" src="https://www.youtube.com/embed/plVk4NVIUh8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
     <p>In this video you see the evolution of bacteria over a period of time. At first, the bacteria were not able to live on the anti-bacterial surfaces, but over time, they could! This is because of process of evolution through random mutations and selection. Even though the original bacteria couldn't originally survive in an extreme environment, some of their decendents could. </p>
-   
+  
 
     <p>While bacteria aren't exactly the same as Pokemon, the same principles of evolution apply. </p>
     
@@ -70,45 +71,43 @@
     
     <div class="photoBox">
       <img width="100%" src="images/metamorphosis1.png" alt="Beedrill family">
-      <p style="outline-style: double;">A</p>
+     
     </div>
-
+    <p class="infobox" >A</p>
+    
     <div class="photoBox">
       <img src="images/dogFamily.png" alt="Dog family" width="100%" >
-      <p style="outline-style: double;">B</p>
-    </div>
-    
-    <!--Insert a clickable box to choose A or B-->
-    <!--Insert a free response box-->
-    <script type="text/javascript">
-    function fn1(){
-      var str = document.getElementById("text1").value;
-      alert("Value inside the textbox is: " + str);
-    }
-    </script>
-    <div class="Quiz">
-        <form>
-          <div class="row">
-            <input id="Name" placeholder="username" width="100%">
-          </div>
-          <div cass="row">
-            <input type="radio" id="preA" name="preA" value="1">
-            <label for="preA">A</label>
-          </div><br>
-          <div calss="row">
-            <input type="radio" id="preB" name="preB" value="2">
-            <label for="preB">B</label><br>
-          </div>
-          
-          <div class="row">
-            <textarea id="explain1" placeholder="Why is this evolution?" style=" height:200px" width="100%"></textarea>
-          </div>
-          <div class="row">
-            <input type="submit" value="Submit">
-          </div>
-        </form>
       
     </div>
+    <p class="infobox">B</p>
+
+    <!--Insert a clickable box to choose A or B-->
+    <!--Insert a free response box-->
+
+   <!-- <form class="Quiz" id="preTest" action="/scripts/masterJSON.json" method="GET"> -->
+        <div class="boxed">
+          <label>What is your name?</label>
+            <input id="Name" placeholder="username" width="100%">
+        <br>
+
+          <label>Which picture is an example of evolution?</label>
+          <br>
+            <input type="radio" id="metamorphosis" name="pretest" value="metamorphosis">
+            <label for="metamorphosis">A</label>
+          <br>
+          
+            <input type="radio" id="evolution" name="pretest" value="evolution">
+            <label for="evolution">B</label><br>
+          <br>
+          
+          <label>Explain why you think this picture is evolution and the other isn't:</label>
+          <br>
+            <textarea id="explain1" cols="50" placeholder="I think (A/B) is evolution because..." style=" height:200px" width="600px"></textarea>
+          </div>
+          
+            <button onclick="writeData()">Submit</button>
+          
+        <!--</form>-->
 
   </div>
   </body>
@@ -116,3 +115,9 @@
 
     
 </html>
+<!--    <script type="text/javascript">
+    function fn1(){
+      var str = document.getElementById("text1").value;
+      alert("Value inside the textbox is: " + str);
+    }
+    </script>-->

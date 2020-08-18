@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  
+<!-- link to fiebase script on repository -->
+  <script src="scripts/firebase4.js"></script>
+<!--End firbase copy and paste-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <title>Pokemon Family Trees</title>
+    <title>Evolutionary Time</title>
 
   </head>
   <body>
@@ -71,17 +83,15 @@
     <p>So this is evolution! <br><br>
       Did the evolution of the squirtle and laparas happen over a short period of time or a long period of time? </p>
     <!--Insert a multiple choice answer-->
-    <p>The evolution happened over a <input id="time1" placeholder="input" width="100%">  period of time.</p>
+    <p>The evolution happened over a <input id="time1" placeholder="long or short?" width="100%">  period of time.</p>
     <p>Does evolution happen to an individual or a species?</p>
     <!--Insert a text box-->
-    <p>Evolution happens to a/an <input id="time2" placeholder="input" width="100%"> .</p>
+    <p>Evolution happens to a/an <input id="time2" placeholder="individual or species?" width="100%"> .</p>
     <br><br>
     <div class="row">
       <input id="Name" placeholder="username" width="100%">
     </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
+    <button onclick="writeHistoryData()">Submit</button>
   <p>Source: <a href="https://www.youtube.com/watch?v=zX9btkrctC0">How Does Evolution Work?</a></p>
 </div>
 </body>
