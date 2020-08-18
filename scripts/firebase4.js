@@ -228,20 +228,28 @@ function checkQuiz(){
 }
 
 //read firbase 
+function readFB() {
+  var user = document.getElementById("Name").value;
 
-/*write chart data
-function chartData(){ 
-  
-  var name= document.getElementById("Name").value
-  firebase.database().ref(`Students/${name}`).set({
-      1: evolutionPretest(),
-      2: document.getElementById("explain1").value
-      3:
-      4:
+  firebase.database().ref('Students/'+ user).once('value').then(function(snapshot){
+
+    var pretest3 = snapshot.val().pretest;
+    var explain13 = snapshot.val().explain1;
+    var childrenlooklikeparents3 = snapshot.val().childrenlooklikeparents;
+    var explain23 = snapshot.val().explain2;
+    var explain33 = snapshot.val().explain3;
+    var time13 = snapshot.val().time1;
+    var time23 = snapshot.val().time2;
+    var explain53 = snapshot.val().explain5;
+
+    document.getElementById("pretest3").innerHTML = pretest3;
+    document.getElementById("explain13").innerHTML = explain13;
+    document.getElementById("childrenlooklikeparents3").innerHTML = childrenlooklikeparents3;
+    document.getElementById("explain23").innerHTML = explain23;
+    document.getElementById("explain33").innerHTML = explain33;
+    document.getElementById("time13").innerHTML = time13;
+    document.getElementById("time23").innerHTML = time23;
+    document.getElementById("explain53").innerHTML = explain53;
+
   })
-  .then(function(){
-      console.log('Submitted!');
-  });
 }
-
-//read chart data
