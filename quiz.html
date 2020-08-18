@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  
+<!-- link to fiebase script on repository -->
+  <script src="scripts/firebase4.js"></script>
+<!--End firbase copy and paste-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <title>Pokemon Family Trees</title>
+    <title>Alola Region</title>
 
   </head>
   <body>
@@ -63,17 +75,22 @@
         <p style="outline-style: double;">B</p>
       </div>
 
+      <div class="boxed">
     <p>So, based on what you learned, lets go back to the original question. Which one of these pictures represents evolution and why? </p>
     <!--Text box entry-->
-    <div class="row">
-        <textarea id="explain7" placeholder="Why?" style="width=100%"></textarea>
-      </div>
-      <div class="row">
+    
+        <textarea id="explain7" placeholder="I think A/B is evolution because..." style="width=100%"></textarea>
+  
+      <br>
         <input id="Name" placeholder="username" width="100%">
-      </div>
-      <div class="row">
-        <input type="submit" value="Submit">
-      </div>
+      <br>
+      <button onclick="writeQuizData()">Submit</button>
+      <button onclick="hint()">Hint</button>
+    </div>
+
+    <br><br>
+    <p id="displayHint">Hint</p>
+
   </div>
   </body>
   
