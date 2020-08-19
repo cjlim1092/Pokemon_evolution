@@ -66,12 +66,12 @@
     <input type="text" id="Name" required="required"><br>
     <button type="button" onclick="readFB();">Get</button><br>
 
-    <p>You originally said <strong id="pretest3"></strong> was evolution because <strong id="explain13"></strong><br>
-    <br>You originally said children <strong id="childrenlooklikeparents3"></strong> look like their parents because <strong id="explain23"></strong><br>
+    <p>You originally said <strong id="pretest3"></strong> was evolution because: <strong id="explain13"></strong><br>
+    <br>You originally said children <strong id="childrenlooklikeparents3"></strong> look like their parents because: <strong id="explain23"></strong><br>
     <br>You predicted that would happen to traits over thousands of years: <strong id="explain33"></strong><br>
     <br>You said that evoluion happened over a <strong id="time13"></strong> period of time. <br>
     <br>You said that evolution happens to a <strong id="time23"></strong>.<br>
-    <br>You said that Exeggutor's traits might help them live in a tropical environment because <strong id="explain53"></strong>. This is an example of natural selection.
+    <br>You said that Exeggutor's traits might help them live in a tropical environment because: <strong id="explain53"></strong>. <br>This is an example of natural selection.
 
 </p>
 <br><br>
@@ -89,19 +89,19 @@
     <input type="radio" id="someT" name="inheritTraits" value="someT">
       <label for="someT">B. No </label><br>
   
-  <label>Natural selection is when traits which help an organism survive in thier aren't passed down to the next generation.</label><br>
+  <label>True or False: Natural selection is when traits which help an organism survive in thier environment aren't passed down to the next generation.</label><br>
     <input type="radio" id="T3" name="natrualSelectionF" value="T3">
       <label for="T3">A. True </label><br>
     <input type="radio" id="F3" name="natrualSelectionF" value="F3">
       <label for="F3">B. False </label><br>
   
   <label>Does evolution happen to an individual or a species?</label>
-    <input type="radio" id="individualF" name="IorS" value="individualF">
+    <br><input type="radio" id="individualF" name="IorS" value="individualF">
       <label for="individualF">A. Individual</label><br>
     <input type="radio" id="speciesT" name="IorS" value="speciesT">
       <label for="speciesT">B. Species </label><br>
   
-      <div><p id="checkQuiz1" onmouseover="checkQuiz()" style="background-color: yellow;">Check</p></div>
+      <div><p id="checkQuiz1" onclick="checkQuiz()" style="background-color: yellow;">Check</p></div>
 </div>
 
     <div class="photoBox">
@@ -117,7 +117,11 @@
       <div class="boxed">
     <p>So, based on what you learned, lets go back to the original question. Which one of these pictures represents evolution and why? </p>
     <!--Text box entry-->
-    
+    <br>
+    <input type="radio" id="Awrong" name="postTest" value="Awrong">
+    <label for="Awrong">A</label>
+    <br><input type="radio" id="Bright" name="postTest" value="Bright">
+    <label for="Bright">B</label><br><br>
         <textarea id="explain7" rows="4" cols="100" placeholder="I think A/B is evolution because..." style="width=100%"></textarea>
   
       <br>
