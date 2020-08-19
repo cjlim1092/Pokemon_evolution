@@ -123,9 +123,7 @@
     <br><input type="radio" id="Bright" name="postTest" value="Bright">
     <label for="Bright">B</label><br><br>
         <textarea id="explain7" rows="4" cols="100" placeholder="I think A/B is evolution because..." style="width=100%"></textarea>
-  
-      <br>
-        <input id="Name" placeholder="username" width="100%">
+
       <br>
       <button onclick="writeQuizData()">Submit</button>
       <button onclick="hint()">Hint</button>
@@ -135,8 +133,16 @@
     <div id="displayHint">Hint</div>
 
     <br><br>
-    <div class="boxed" id="graph">
-
+    <div class="boxed" id="endResults">
+      <h2>See how you did Compared to others</h2><br>
+      <button type="button" onclick="readResults();">Results</button><br>
+      <p><u id="4right"></u> people got 4 questions right<br>
+          <u id="3right"></u> people got 3 questions right<br>
+          <u id="2right"></u> people got 2 questions right<br>
+          <u id="1right"></u> people got 1 question right<br>
+          <u id="0right"></u> people got 0 questions right<br>
+          <!--<u id="improve"></u> improved on the pre- and post-test over the course of this module-->
+      </p>
 
     </div>
 
