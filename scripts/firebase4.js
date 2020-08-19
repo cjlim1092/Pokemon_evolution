@@ -108,7 +108,7 @@ function writeFamilyData(){
   }
 
 //radio button variables
-  function evolutionPosttest() { 
+  function evolutionPretest() { 
    if (document.getElementById("evolution").checked === true){
        return "B";
    } else{
