@@ -97,20 +97,29 @@ function writeFamilyData(){
     var name= document.getElementById("Name").value
     
     firebase.database().ref(`Students/${name}`).update({
-        explain7: document.getElementById("explain7").value
+        explain7: document.getElementById("explain7").value,
+        postTest: evolutionPosttest(),
+        results: howMany()
     })
     .then(function(){
-        console.log('Success!');
+        alert('Submitted!');
     });
   }
 
 //radio button variables
-  function evolutionPretest() { 
+  function evolutionPosttest() { 
    if (document.getElementById("evolution").checked === true){
        return "B";
    } else{
        return "A";
    }}
+
+   function evolutionPosttest() { 
+    if (document.getElementById("Bright").checked === true){
+        return "B";
+    } else{
+        return "A";
+    }}
 
  // Check Answer on metamorphosis and give feedback
   function check(){
@@ -194,9 +203,9 @@ function checkNS(){
 }
 function checkNS2(){
   if (document.getElementById("NatSelN2").checked === true){
-    alert("Correct! Sometimes traits are passed down randomly, or because they look good. ;)")
+    alert("Try again. Think about why they have hair but the original ones do not.)")
 } else{
-    alert("Try again. Natural selection helps species survive in their environments.");
+    alert("Correct! The hair helps protect them from the environment. It also looks good ;)");
 }; 
 }
 
