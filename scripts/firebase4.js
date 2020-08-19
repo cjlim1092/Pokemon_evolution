@@ -100,6 +100,7 @@ function writeFamilyData(){
         explain7: document.getElementById("explain7").value,
         postTest: evolutionPosttest(),
         results: howMany()
+
     })
     .then(function(){
         alert('Submitted!');
@@ -262,3 +263,58 @@ function readFB() {
 
   })
 }
+
+
+//write chart data How many people improved on the pretest to the post test
+//write chart data how many people got 4 right, 3 right, 2 right, 1 right
+function fetchResults(arr){
+  var ref = firebase.database().ref("Students");
+ref.orderByChild("results").on("child_added", function(snapshot) {
+  var allResults = snapshot.child("results").val();
+ // console.log (allResults);
+  
+  arr.push(allResults);
+
+})
+}
+
+function readResults(){
+  var arr = [];
+  fetchResults(arr)
+ 
+  console.log (arr);
+  let fourRight = 0;
+  let threeRight = 0;
+  let twoRight = 0;
+  let oneRight = 0;
+  let noneRight = 0;
+ // console.log(fourRight);
+ var i = 0;
+ for(let i=0; i < arr.length; i++){
+  console.log(i);
+    if (arr[i] === 0){
+      fourRight ++;
+
+    } else if (arr[i] ===3){
+      threeRight ++;
+    }
+  //  console.log(fourRight);
+  }// console.log(fourRight);
+  document.getElementById("4right").innerHTML = fourRight;
+  document.getElementById("3right").innerHTML = threeRight;
+  document.getElementById("2right").innerHTML = twoRight;
+  document.getElementById("1right").innerHTML = oneRight;
+  document.getElementById("0right").innerHTML = noneRight;
+}
+
+
+
+
+/*let fc = firebase.database().ref('Students/studentName');
+let jsonString;
+fc.on("value", function(retrieve){
+  let queryData = retrieve.val();
+  jsonString = JSON.stringify(queryData);
+
+});
+console.log('JSON string: '+ jsonString);*/
