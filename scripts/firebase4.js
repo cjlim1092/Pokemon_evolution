@@ -289,17 +289,23 @@ function readResults(){
   let oneRight = 0;
   let noneRight = 0;
  // console.log(fourRight);
- var i = 0;
+ 
  for(let i=0; i < arr.length; i++){
-  console.log(i);
-    if (arr[i] === 0){
+
+    if (arr[i] === 4){
       fourRight ++;
 
     } else if (arr[i] ===3){
       threeRight ++;
+    }else if (arr[i] ===2){
+      twoRight ++;
+    }else if (arr[i] ===1){
+      oneRight ++;
+    }else if (arr[i] ===0){
+      noneRight ++;
     }
   //  console.log(fourRight);
-  }// console.log(fourRight);
+  };// console.log(fourRight);
   document.getElementById("4right").innerHTML = fourRight;
   document.getElementById("3right").innerHTML = threeRight;
   document.getElementById("2right").innerHTML = twoRight;
