@@ -272,47 +272,47 @@ function fetchResults(arr){
 ref.orderByChild("results").on("child_added", function(snapshot) {
   var allResults = snapshot.child("results").val();
  // console.log (allResults);
-  
   arr.push(allResults);
 
 })
 }
-
 function readResults(){
   var arr = [];
-  fetchResults(arr)
- 
-  console.log (arr);
-  let fourRight = 0;
+  fetchResults(arr);
+  //declare counters
+  let fourRight =0;
   let threeRight = 0;
   let twoRight = 0;
   let oneRight = 0;
   let noneRight = 0;
- // console.log(fourRight);
- 
- for(let i=0; i < arr.length; i++){
-
-    if (arr[i] === 4){
-      fourRight ++;
-
-    } else if (arr[i] ===3){
-      threeRight ++;
-    }else if (arr[i] ===2){
-      twoRight ++;
-    }else if (arr[i] ===1){
-      oneRight ++;
-    }else if (arr[i] ===0){
+  
+  //loop
+  for (let i=0; i < arr.length -1; i++){
+    console.log("Arr i is: " + arr[i]);
+    if (arr[i] == 0){
       noneRight ++;
+    } else if (arr[i] == 1){
+      oneRight ++;
+    } else if (arr[i] == 2){
+      twoRight ++;
+    } else if (arr[i] == 3){
+      threeRight ++;
+      
+    } else if (arr[i] == 4){
+      fourRight ++;
+      console.log("Arr 0 is: " + arr[i]);
+      console.log("fourRight: " + fourRight);
     }
-  //  console.log(fourRight);
-  };// console.log(fourRight);
-  document.getElementById("4right").innerHTML = fourRight;
-  document.getElementById("3right").innerHTML = threeRight;
-  document.getElementById("2right").innerHTML = twoRight;
-  document.getElementById("1right").innerHTML = oneRight;
-  document.getElementById("0right").innerHTML = noneRight;
+    
+  }
+  
+  document.getElementById('noneright').innerHTML = noneRight;
+  document.getElementById('oneright').innerHTML = oneRight;
+  document.getElementById('tworight').innerHTML = twoRight;
+  document.getElementById('threeright').innerHTML = threeRight;
+  document.getElementById('fourright').innerHTML = fourRight;
+  
 }
-
 
 
 
